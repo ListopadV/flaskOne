@@ -26,9 +26,9 @@ def page_with_error(e):
 
 
 
-@app.errorhandler(300)
+@app.errorhandler(502)
 def page_with_error(e):
-    return render_template('300.html'), 300
+    return render_template('502.html'), 502
 
 
 
