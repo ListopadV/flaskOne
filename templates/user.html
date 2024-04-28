@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{#here we add element and write |safe to compile variable #}
+{{ hh|safe }}
+
+{# adding text #}
+{{ text|title }}
+
+<p>Lorem ipsum dom amed {{ name|upper }}</p>
+
+# for loop where we show values
+{% for i in arr %}
+    <p>{{ i }}</p>
+{% endfor %}
+
+<p>{{ arr.0 }}</p>
+<p>{{ arr.1 }}</p>
+<p>{{ arr.2 }}</p>
+<p>{{ arr.3 }}</p>
+
+<div>
+
+{## for loop with if statement#}
+    {% for t in arr %}
+
+        {% if t == 42 %}
+            <p>{{ t + 42}}</p>
+            {% else  %}
+            <p>{{ t|reverse }}</p>
+        {% endif %}
+    {% endfor %}
+
+</div>
+
+
+</body>
+</html>
