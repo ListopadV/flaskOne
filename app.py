@@ -26,6 +26,11 @@ def page_with_error(e):
 
 
 
+@app.errorhandler(300)
+def page_with_error(e):
+    return render_template('300.html'), 300
+
+
 
 if __name__ == '__main__':
     app.run()
